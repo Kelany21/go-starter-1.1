@@ -1,0 +1,19 @@
+{
+  "name": "settings",
+  "route": "settings",
+  "model"  : "setting",
+  "table" : "settings",
+  "permissions": {
+    "index": [
+      "Index",
+      "Show",
+      "Status"
+    ],
+    "update": [
+      "Update"
+    ]
+  },
+  "statuses": [
+    "all"
+  ]
+}

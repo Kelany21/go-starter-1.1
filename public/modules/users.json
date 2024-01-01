@@ -1,0 +1,39 @@
+{
+  "name": "users",
+  "route": "users",
+  "model": "user",
+  "table": "users",
+  "permissions": {
+    "index": [
+      "Index",
+      "Show",
+      "Status"
+    ],
+    "store": [
+      "Store"
+    ],
+    "update": [
+      "Update",
+      "QuickEdit",
+      "Active",
+      "DeActive",
+      "Trash",
+      "Block",
+      "BulkActive",
+      "BulkDeActive",
+      "BulkTrash",
+      "BulkBlock"
+    ],
+    "delete": [
+      "Delete",
+      "BulkDelete"
+    ]
+  },
+  "statuses": [
+    "all",
+    "activate",
+    "deactivate",
+    "trash",
+    "block"
+  ]
+}

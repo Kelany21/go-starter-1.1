@@ -1,0 +1,38 @@
+{
+  "name": "categories",
+  "route": "categories",
+  "model": "category",
+  "table": "categories",
+  "trans_table": "category_i18ns",
+  "permissions": {
+    "index": [
+      "Index",
+      "Show",
+      "Status",
+      "GetAllCategories"
+    ],
+    "store": [
+      "Store"
+    ],
+    "update": [
+      "Update",
+      "QuickEdit",
+      "Active",
+      "DeActive",
+      "Trash",
+      "BulkActive",
+      "BulkDeActive",
+      "BulkTrash"
+    ],
+    "delete": [
+      "Delete",
+      "BulkDelete"
+    ]
+  },
+  "statuses": [
+    "all",
+    "activate",
+    "deactivate",
+    "trash"
+  ]
+}

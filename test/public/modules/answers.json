@@ -1,0 +1,21 @@
+{
+  "name": "answers",
+  "route": "answers",
+  "model": "answer",
+  "table": "answers",
+  "trans_table": "answer_i18ns",
+  "permissions": {
+    "store": [
+      "StoreAnswer"
+    ],
+    "update": [
+      "UpdateAnswer"
+    ]
+  },
+  "statuses": [
+    "all",
+    "activate",
+    "deactivate",
+    "trash"
+  ]
+}

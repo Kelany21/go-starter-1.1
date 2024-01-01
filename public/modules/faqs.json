@@ -1,0 +1,41 @@
+{
+  "name": "faqs",
+  "route": "faqs",
+  "model": "faq",
+  "table": "faqs",
+  "trans_table": "faq_i18ns",
+  "permissions": {
+    "index": [
+      "Index",
+      "Show",
+      "ShowFaq",
+      "Status",
+      "GetAllFaqs"
+    ],
+    "store": [
+      "Store",
+      "StoreFaqWithAnswers"
+    ],
+    "update": [
+      "Update",
+      "UpdateFaqWithAnswers",
+      "QuickEdit",
+      "Active",
+      "DeActive",
+      "Trash",
+      "BulkActive",
+      "BulkDeActive",
+      "BulkTrash"
+    ],
+    "delete": [
+      "Delete",
+      "BulkDelete"
+    ]
+  },
+  "statuses": [
+    "all",
+    "activate",
+    "deactivate",
+    "trash"
+  ]
+}

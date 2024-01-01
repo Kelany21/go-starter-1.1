@@ -1,0 +1,38 @@
+{
+  "name": "pages",
+  "route": "pages",
+  "model": "pages",
+  "table": "pages",
+  "trans_table": "page_i18ns",
+  "permissions": {
+    "index": [
+      "Index",
+      "Show",
+      "Status",
+      "GetAllPages"
+    ],
+    "store": [
+      "Store"
+    ],
+    "update": [
+      "Update",
+      "QuickEdit",
+      "Active",
+      "DeActive",
+      "Trash",
+      "BulkActive",
+      "BulkDeActive",
+      "BulkTrash"
+    ],
+    "delete": [
+      "Delete",
+      "BulkDelete"
+    ]
+  },
+  "statuses": [
+    "all",
+    "activate",
+    "deactivate",
+    "trash"
+  ]
+}

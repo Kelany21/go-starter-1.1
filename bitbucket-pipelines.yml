@@ -1,0 +1,22 @@
+image: golang:latest
+pipelines:
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
+          - apt-get update
+          - apt-get -y install rsync openssh-client ssh
+          - cp env .env
+          - sed -i -e 's/local/production/g' .env
+          - sed -i -e 's/DATABASE_PASSWORD=/DATABASE_PASSWORD=tm5rJ1Sk/g' .env
+          - cat .env
+          - cd ..
+          - cp -r build starter-golang-new
+          - cd starter-golang-new
+          - go mod download
+          - go build
+          - rsync -rav --delete starter-golang-new ubuntu@18.203.101.73:/home/ubuntu/go/path/bin
+          - rsync -rav --delete .env ubuntu@18.203.101.73:/home/ubuntu/go/path/bin
+          - rsync -rav --delete public/images ubuntu@18.203.101.73:/home/ubuntu/go/path/bin/public
+          - rsync -rav --delete public/modules ubuntu@18.203.101.73:/home/ubuntu/go/path/bin/public
+          - rsync -rav --delete public/trans ubuntu@18.203.101.73:/home/ubuntu/go/path/bin/public
+          - ssh ubuntu@18.203.101.73 "sudo setcap CAP_NET_BIND_SERVICE=+eip /home/ubuntu/go/path/bin/starter-golang-new && cd /home/ubuntu/go/path/bin  && pm2 delete starter-golang-new && pm2 start starter-golang-new"

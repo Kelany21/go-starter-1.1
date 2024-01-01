@@ -1,0 +1,7 @@
+version: '3'
+services:
+  twitter-backend:
+    restart: always
+    build: .
+    ports:
+      - 80:80

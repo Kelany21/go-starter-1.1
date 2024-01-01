@@ -1,0 +1,16 @@
+{
+  "name": "images",
+  "route": "images",
+  "model": "images",
+  "table": "images",
+  "permissions": {
+    "store": [
+      "Store"
+    ],
+    "delete": [
+      "Delete"
+    ]
+  },
+  "statuses": [
+  ]
+}
